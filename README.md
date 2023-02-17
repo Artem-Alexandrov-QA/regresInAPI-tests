@@ -1,1 +1,1 @@
-# regressInAPI-tests
+# Автотесты на запросы из  [reqres.in](https://reqres.in/) с использованием библиотеки [REST-Assured](https://github.com/rest-assured/rest-assured/wiki/usage)
