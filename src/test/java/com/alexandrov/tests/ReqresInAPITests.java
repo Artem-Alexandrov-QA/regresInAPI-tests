@@ -1,7 +1,9 @@
 package com.alexandrov.tests;
 
+import com.alexandrov.tests.filters.AllureRestAssuredFilter;;
 import org.json.JSONObject;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -12,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ReqresInAPITests {
 
     @Test
+    @Tag("api-tests")
     @DisplayName("Login - Successful")
     void checkRegisterSuccessful() {
 
@@ -23,26 +26,30 @@ public class ReqresInAPITests {
         expectedBody.put("id", 4);
         expectedBody.put("token", "QpwL5tke4Pnpja7X4");
 
-        String actualBody = given()
-                .log().uri()
-                .log().body()
-                .contentType(JSON)
-                .body(requestBody.toString())
-                .when()
-                .post("https://reqres.in/api/register")
-                .then()
-                .log().status()
-                .log().body()
-                .statusCode(200)
-                .extract()
-                .response().getBody().asString();
+        String actualBody =
+                given()
+                        .filter(AllureRestAssuredFilter.withCustomTemplates())
+                        .log().uri()
+                        .log().body()
+                        .contentType(JSON)
+                        .body(requestBody.toString())
+                        .when()
+                        .post("https://reqres.in/api/register")
+                        .then()
+                        .log().status()
+                        .log().body()
+                        .statusCode(200)
+                        .extract()
+                        .response().getBody().asString();
         assertEquals(expectedBody.toString(), actualBody);
     }
 
     @Test
+    @Tag("api-tests")
     @DisplayName("Single user")
     void checkGetSingleUserTest() {
         given()
+                .filter(AllureRestAssuredFilter.withCustomTemplates())
                 .log().uri()
                 .log().body()
                 .when()
@@ -60,6 +67,7 @@ public class ReqresInAPITests {
     }
 
     @Test
+    @Tag("api-tests")
     @DisplayName("Create User")
     void checkPostCreateTest() {
 
@@ -68,6 +76,7 @@ public class ReqresInAPITests {
         requestBody.put("job", "SimbirSoft");
 
         given()
+                .filter(AllureRestAssuredFilter.withCustomTemplates())
                 .log().uri()
                 .log().body()
                 .contentType(JSON)
@@ -83,6 +92,7 @@ public class ReqresInAPITests {
     }
 
     @Test
+    @Tag("api-tests")
     @DisplayName("Update user")
     void checkPutUpdateTest() {
 
@@ -91,6 +101,7 @@ public class ReqresInAPITests {
         requestBody.put("job", "QA Engineer");
 
         given()
+                .filter(AllureRestAssuredFilter.withCustomTemplates())
                 .log().uri()
                 .log().body()
                 .contentType(JSON)
@@ -106,10 +117,12 @@ public class ReqresInAPITests {
     }
 
     @Test
+    @Tag("api-tests")
     @DisplayName("Delete user")
     void checkDeleteTest() {
 
         given()
+                .filter(AllureRestAssuredFilter.withCustomTemplates())
                 .log().uri()
                 .log().body()
                 .when()
