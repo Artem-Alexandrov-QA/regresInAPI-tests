@@ -1,6 +1,7 @@
 package com.alexandrov.tests;
 
 import com.alexandrov.tests.filters.AllureRestAssuredFilter;;
+import io.qameta.allure.AllureId;
 import org.json.JSONObject;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -15,6 +16,7 @@ public class ReqresInAPITests {
 
     @Test
     @Tag("api-tests")
+    @AllureId("15281")
     @DisplayName("Login - Successful")
     void checkRegisterSuccessful() {
 
@@ -46,6 +48,7 @@ public class ReqresInAPITests {
 
     @Test
     @Tag("api-tests")
+    @AllureId("15280")
     @DisplayName("Single user")
     void checkGetSingleUserTest() {
         given()
@@ -68,6 +71,7 @@ public class ReqresInAPITests {
 
     @Test
     @Tag("api-tests")
+    @AllureId("15282")
     @DisplayName("Create User")
     void checkPostCreateTest() {
 
@@ -93,6 +97,7 @@ public class ReqresInAPITests {
 
     @Test
     @Tag("api-tests")
+    @AllureId("15279")
     @DisplayName("Update user")
     void checkPutUpdateTest() {
 
@@ -118,6 +123,7 @@ public class ReqresInAPITests {
 
     @Test
     @Tag("api-tests")
+    @AllureId("15278")
     @DisplayName("Delete user")
     void checkDeleteTest() {
 
