@@ -1,6 +1,6 @@
 # Проект автоматизации тестирования API на платформе [regres.in](https://reqres.in/)
 
-##	Содержание
+## 📘 Содержание:
 
 - [Технологии и инструменты](#technologist-технологии-и-инструменты)
 - [Реализованныe проверки](#bookmark_tabs-реализованные-проверки)
@@ -54,7 +54,7 @@ gradle clean test
 иконки *Allure Report* и *Allure TestOPS*, которые по клику открывают страницы соответствующих отчетов.
 
 <p align="center">
-  <img src="src/test/resources/img/screenshots/Allure.png">
+  <img src="src/test/resources/img/screenshots/Jenkins2.png">
 </p>
 
 ## <img width="4%" title="Allure Report" src="src/test/resources/img/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/regresInAPI_tests/1/allure/#suites/2a99c9be34f1b0071cd237aacc339ae0/4c7db381de00c955/)
