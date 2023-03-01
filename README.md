@@ -61,7 +61,7 @@ gradle clean test
 ## <img width="4%" title="Allure Report" src="src/test/resources/img/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/regresInAPI_tests/1/allure/#suites/2a99c9be34f1b0071cd237aacc339ae0/4c7db381de00c955/)
 
 <p align="center">
-  <img src="src/test/resources/img/screenshots/AllureReport.png" alt="allure-report1" width="900">
+  <img src="src/test/resources/img/screenshots/Allure.png" alt="allure-report1" width="900">
 </p>
 
 
