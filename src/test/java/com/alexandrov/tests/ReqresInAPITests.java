@@ -115,6 +115,7 @@ public class ReqresInAPITests {
                 .spec(responseDeleteSpec);
     }
 
+    @AllureId("15349")
     @ValueSource(strings = {
             "george.bluth@reqres.in",
             "janet.weaver@reqres.in",
